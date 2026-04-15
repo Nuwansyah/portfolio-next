@@ -3,5 +3,6 @@ export type Project = {
   title: string;
   description: string;
   tech: string[];
-  media: string[]; 
+  media: string[];
+  thumnail: string;
 };

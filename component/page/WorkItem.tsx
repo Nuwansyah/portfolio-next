@@ -4,7 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Project } from "@/types/project";
-import { projects } from "@/data/project";
+import { Button } from "@/components/ui/button"
+import FadeIn from "@/animation/FadeIn";
 
 type Props = {
     project: Project;
@@ -28,12 +29,13 @@ export default function WorkItem({ project }: Props) {
   return (
     <div className="min-h-screen flex items-center px-6 md:px-20 py-20 border-b border-zinc-800">
       
-      <div className="grid md:grid-cols-2 gap-10 w-full max-w-6xl mx-auto">
+      <div className="grid grid-cols-[2fr_1fr] gap-6 items-center w-full"> 
 
         {/* LEFT: MEDIA */}
-        <div>
-          <div className="relative h-[300px] rounded-xl overflow-hidden">
-
+        <FadeIn>
+        <div >
+          <div className="relative w-full aspect-2/1 rounded-xl overflow-hidden">
+    
             <AnimatePresence mode="wait">
               <motion.div
                 key={project.media[mediaIndex]}
@@ -53,16 +55,17 @@ export default function WorkItem({ project }: Props) {
             </AnimatePresence>
 
           </div>
-
+          
           {/* MEDIA CONTROL */}
-          <div className="flex justify-between mt-4">
-            <button onClick={prev}>Prev</button>
-            <button onClick={next}>Next</button>
+          <div className="flex justify-center items-center gap-4 mt-4">
+            <Button onClick={prev} variant="secondary">Prev</Button>
+            <Button onClick={next} variant="secondary">Next</Button>
           </div>
         </div>
-
+        </FadeIn>
         {/* RIGHT: INFO */}
-        <div>
+        <div className="">
+          <FadeIn>
           <h2 className="text-3xl font-bold">{project.title}</h2>
 
           <p className="mt-4 text-zinc-400">
@@ -79,6 +82,7 @@ export default function WorkItem({ project }: Props) {
               </span>
             ))}
           </div>
+          </FadeIn>
         </div>
 
       </div>

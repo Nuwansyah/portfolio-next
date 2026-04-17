@@ -38,3 +38,25 @@ export const aboutMeSection ={
       en: "loreipsumblalalalaalalallala",
     }
 }
+
+export const worksSection ={
+  title: {
+    id: "Karya Saya",
+    en: "My Works",
+  },
+  description: {
+    id: "bahasaindonesianyamantap",
+    en: "loreipsumblalalalaalalallala",
+  }
+}
+
+export const contactMeSection ={
+  title: {
+    id: "Kontak Saya",
+    en: "Contact Me",
+  },
+  description: {
+    id: "bahasaindonesianyamantap",
+    en: "loreipsumblalalalaalalallala",
+  }
+}

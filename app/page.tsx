@@ -1,9 +1,9 @@
 
-import Navbar from "@/component/page/NavBar";
-import HomeSection from "@/component/section/HomeSection";
-import AboutSection from "@/component/section/AboutMeSection";
-import WorksSection from "@/component/section/WorksSection";
-import ContactSection from "@/component/section/ContactMeSection";
+import Navbar from "@/components/page/NavBar";
+import HomeSection from "@/components/section/HomeSection";
+import AboutSection from "@/components/section/AboutMeSection";
+import WorksSection from "@/components/section/WorksSection";
+import ContactSection from "@/components/section/ContactMeSection";
 
 export default function Home() {
   return (

@@ -15,13 +15,13 @@ export default function HomeSection() {
       <div className="text-center">
         
         <FadeIn>
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-4xl md:text-6xl font-bold text-texttitle">
             {homeSection.title[lang]}
           </h1>
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-4 text-textdesc">
             {homeSection.description[lang]}
           </p>
         </FadeIn>

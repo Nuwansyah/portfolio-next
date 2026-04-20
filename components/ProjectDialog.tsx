@@ -46,10 +46,10 @@ export default function ProjectDialog({ project, children }: Props) {
         <div className="grid md:grid-cols-[1.3fr_1fr] h-full w-full">
 
           {/* LEFT: MEDIA */}
-          <div className="flex flex-col h-full bg-black">
+          <div className="flex flex-col pt-10 pl-5 bg-black">
             
             {/* MEDIA */}
-            <div className="relative flex-1 flex items-center justify-center p-6 ">
+            <div className="relative w-[800px] h-[450px] aspect-video ">
             {current.includes("youtube") ? (
               <iframe
                 src={current}
@@ -69,23 +69,23 @@ export default function ProjectDialog({ project, children }: Props) {
             </div>
           
             {/* CONTROLS */}
-              <div className="flex justify-center gap-4 p-4 border-t border-black bg-black">
+              <div className="flex justify-center gap-4 pt-5 border-t border-black bg-black">
                 <button
                   onClick={prev}
-                  className="px-4 py-2  hover:bg-muted hover:text-black transition rounded"
+                  className="px-4 py-2 bg-white/13  hover:bg-muted hover:text-black transition rounded"
                 >
                   Prev
                 </button>
                 <button
                   onClick={next}
-                  className="px-4 py-2 hover:bg-muted hover:text-black transition rounded"
+                  className="px-4 py-2 bg-white/13  hover:bg-muted hover:text-black transition rounded"
                 >
                   Next
                 </button>
               </div>
-            </div>    
-            {/* RIGHT: DETAIL */}
-            <div className="p-6 flex flex-col justify-center">
+          </div>    
+          {/* RIGHT: DETAIL */}
+          <div className="p-6 flex flex-col justify-center">
               
               <h2 className="text-2xl font-bold">
                 {project.title[lang]}
@@ -106,7 +106,7 @@ export default function ProjectDialog({ project, children }: Props) {
                 ))}
               </div>
 
-            </div>
+          </div>
 
         </div>
       </DialogContent>

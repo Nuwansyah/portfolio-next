@@ -14,7 +14,10 @@ export default function AboutSection() {
             </FadeIn>
             <FadeIn delay={0.2}>
                 <p className="text-textdesc">
-                  {aboutMeSection.description[lang]}
+                  {aboutMeSection.description1[lang]},
+                  {aboutMeSection.description2[lang]},
+                  {aboutMeSection.description3[lang]},
+                  {aboutMeSection.description4[lang]}
                 </p>
             </FadeIn>
           

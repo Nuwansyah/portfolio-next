@@ -121,9 +121,12 @@ export const projects = [
       en: "ingreesss",
     },
     tech: ["Next.js", "Clerk", "Aiven(PostgreSQL)", "Vercel"],
-    thumnail: "",
+    thumnail: "/images/EduKom/1.png",
     media: [
-      "/images/budget1.png",
+      "/images/EduKom/1.png",
+      "/images/EduKom/2.png",
+      "/images/EduKom/3.png",
+      "/images/EduKom/4.png",
     ],
   },
   {
@@ -137,9 +140,11 @@ export const projects = [
       en: "ingreesss",
     },
     tech: ["Blender"],
-    thumnail: "",
+    thumnail: "/images/Blender/1.png",
     media: [
-      "/images/budget1.png",
+      "/images/Blender/1.png",
+      "/images/Blender/2.png",
+      "/images/Blender/3.png",
     ],
   },
   {
@@ -153,9 +158,11 @@ export const projects = [
       en: "ingreesss",
     },
     tech: ["Javascript", "Blockbench"],
-    thumnail: "",
+    thumnail: "/images/MinecraftModding/1.jpg",
     media: [
-      "/images/budget1.png",
+      "/images/MinecraftModding/1.jpg",
+      "/images/MinecraftModding/2.jpg",
+      "/images/MinecraftModding/3.jpg",
     ],
   }
 ];

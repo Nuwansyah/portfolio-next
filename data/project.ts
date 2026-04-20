@@ -13,7 +13,8 @@ export const projects = [
     thumnail: "images/DigitalisasiKA/1.png",
     media: [
       "/images/DigitalisasiKA/1.png",
-      "/images/DigitalisasiKA/2.png"
+      "/images/DigitalisasiKA/2.png",
+      "/images/DigitalisasiKA/3.png"
     ],
   },
   {
@@ -47,8 +48,9 @@ export const projects = [
       en: "ingreesss",
     },
     tech: ["C#", "Unity"],
-    thumnail: "",
+    thumnail: "/images/KampungSebelah/1.png",
     media: [
+      
       "https://www.youtube.com/embed/gICyu-lXT8E",
     ],
   },
@@ -63,9 +65,11 @@ export const projects = [
       en: "ingreesss",
     },
     tech: ["C#", "Unity", "VR Framework"],
-    thumnail: "",
+    thumnail: "/images/VRMitigasi/1.png",
     media: [
-      "/images/budget1.png",
+      "/images/VRMitigasi/1.png",
+      "/images/VRMitigasi/2.png",
+      "/images/VRMitigasi/3.png",
     ],
   },
   {
@@ -79,9 +83,12 @@ export const projects = [
       en: "ingreesss",
     },
     tech: ["C#", "Unity"],
-    thumnail: "",
+    thumnail: "/images/OnYourOwn/1.png",
     media: [
-      "/images/budget1.png",
+      "/images/OnYourOwn/1.png",
+      "/images/OnYourOwn/2.png",
+      "/images/OnYourOwn/3.png",
+      "https://www.youtube.com/embed/VPG1YLo_epk",
     ],
   },
   {
@@ -95,9 +102,12 @@ export const projects = [
       en: "ingreesss",
     },
     tech: ["C#", "Unity"],
-    thumnail: "",
+    thumnail: "images/TreeOfLife/1.png",
     media: [
-      "/images/budget1.png",
+      "/images/TreeOfLife/1.png",
+      "/images/TreeOfLife/2.png",
+      "/images/TreeOfLife/3.png",
+      "https://www.youtube.com/embed/ToTR7b54010",
     ],
   },
   {

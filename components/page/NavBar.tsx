@@ -31,25 +31,25 @@ export default function Navbar() {
 
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="#home">{navText.home[lang]}</Link>
+              <a href="#home">{navText.home[lang]}</a>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()} >
+              <a href="#about">{navText.about[lang]}</a>
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="#about">{navText.about[lang]}</Link>
+              <a href="#works">{navText.works[lang]}</a>
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="#works">{navText.works[lang]}</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="#contact">{navText.contact[lang]}</Link>
+              <a href="#contact">{navText.contact[lang]}</a>
             </NavigationMenuLink>
           </NavigationMenuItem>
 

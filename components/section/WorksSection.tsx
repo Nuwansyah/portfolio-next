@@ -8,7 +8,7 @@ import { worksSection} from "@/data/translation";
 export default function WorksSection() {
   const { lang } = useLanguage();
   return (
-    <section id="works" className="min-h-screen px-6 md:px-20 py-30 border-b border-black">
+    <section id="works" className="min-h-screen px-6 md:px-20 py-30">
       {/* TITLE */}
         <div>
       <FadeIn>

@@ -19,10 +19,10 @@ export function CardImage({ project }: Props) {
   const { lang } = useLanguage();
   return (
     <ProjectDialog project={project}>
-      <Card className="group cursor-pointer overflow-hidden outline-5 outline-background shadow-cyan-500/50 ">
+      <Card className="group cursor-pointer overflow-hidden outline-5 outline-card shadow-black-500/50 ">
       
       {/* IMAGE */}
-      <div className="relative aspect-video">
+      <div className="relative aspect-video border-xl">
         <img
           src={project.thumnail}
           alt={project.title[lang]}
@@ -30,7 +30,7 @@ export function CardImage({ project }: Props) {
         />
 
         {/* overlay */}
-        <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 group-hover:scale-105 transition pointer-events-none" />
+        <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 group-hover:scale-105 transition pointer-events-none border-xl" />
       </div>
 
       {/* CONTENT */}

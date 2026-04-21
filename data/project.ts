@@ -50,7 +50,7 @@ export const projects = [
     tech: ["C#", "Unity"],
     thumnail: "/images/KampungSebelah/1.png",
     media: [
-      
+      "/images/KampungSebelah/1.png",
       "https://www.youtube.com/embed/gICyu-lXT8E",
     ],
   },

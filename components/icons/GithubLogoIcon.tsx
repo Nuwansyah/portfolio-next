@@ -3,7 +3,7 @@ import * as React from "react";
 export function GithubLogoIcon({
   size = 15,
   color = "currentColor",
-  strokeWidth = 2,
+  strokeWidth = 1,
   className,
   ...props
 }: React.SVGProps<SVGSVGElement> & {

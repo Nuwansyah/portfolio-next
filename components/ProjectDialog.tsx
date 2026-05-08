@@ -5,9 +5,10 @@ import {
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
+import { Loader2 } from "lucide-react";
 
 import { DialogTitle } from "@/components/ui/dialog";
 
@@ -19,6 +20,7 @@ type Props = {
 export default function ProjectDialog({ project, children }: Props) {
   const { lang } = useLanguage();
   const [index, setIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   const next = () => {
     setIndex((prev) =>
@@ -33,8 +35,13 @@ export default function ProjectDialog({ project, children }: Props) {
   };
 
   const current = project.media[index];
+  
+  useEffect(() => {
+    setLoading(true);
+  }, [current]);
 
   return (
+    
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
 
@@ -48,24 +55,37 @@ export default function ProjectDialog({ project, children }: Props) {
           {/* LEFT: MEDIA */}
           <div className="flex flex-col pt-10 pl-5 bg-black">
             
+
+
             {/* MEDIA */}
-            <div className="relative w-[800px] h-[450px] aspect-video ">
-            {current.includes("youtube") ? (
-              <iframe
-                src={current}
-                className="w-full h-full rounded-lg"
-                allowFullScreen
-              />
-              ) : (
-                <div className="relative w-[800px] h-[450px] ">
-                  <Image
-                    src={current}
-                    alt=""  
-                    fill
-                    className="object-contain shadow-xl/30 shadow-gray-50/30 "
-                  />
-                </div>
+            <div className="relative w-full max-w-3xl aspect-video rounded-xl">
+            
+              {loading && (
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <Loader2 className="w-8 h-8 animate-spin text-white" />
+              </div>
               )}
+
+              {current.includes("youtube") ? (
+                <iframe
+                  src={current}
+                  className="w-full h-full rounded-lg"
+                  allowFullScreen
+                  onLoad={() => setLoading(false)}
+                />
+                ) : (
+                  <Image
+                      src={current}
+                      alt=""  
+                      fill
+                      onLoadingComplete={() => setLoading(false)}
+                      className={`
+                      object-contain
+                      transition-opacity duration-300
+                      ${loading ? "opacity-0" : "opacity-100 "}
+                    `}
+                  />
+                )}
             </div>
           
             {/* CONTROLS */}

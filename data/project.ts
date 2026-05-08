@@ -120,7 +120,7 @@ export const projects = [
       id: "indoooooo",
       en: "ingreesss",
     },
-    tech: ["Next.js", "Clerk", "Aiven(PostgreSQL)", "Vercel"],
+    tech: ["Next.js", "Clerk", "PostgreSQL", "Vercel"],
     thumnail: "/images/EduKom/1.png",
     media: [
       "/images/EduKom/1.png",

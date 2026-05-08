@@ -46,7 +46,49 @@ export const aboutMeSection ={
             "I focus on writing structured and maintainable code, applying modular architecture, and designing systems that are scalable and easy to extend. I enjoy solving complex problems and turning them into efficient and practical solutions.",
             "Currently, I am continuously improving my skills and exploring opportunities to contribute to impactful software projects.",
           ]
-    }
+    },
+    skills: [
+      {
+        title: {
+          id: "Web Development",
+          en: "Web Development",
+        },
+        desc: {
+          id: ["Next.js", "React", "Tailwind"],
+          en: ["Next.js", "React", "Tailwind"],
+        },
+      },
+      {
+        title: {
+          id: "Game Development",
+          en: "Game Development",
+        },
+        desc: {
+          id: ["Unity", "C#"],
+          en: ["Unity", "C#"],
+        },
+      },
+      {
+        title: {
+          id: "Tools",
+          en: "Tools",
+        },
+        desc: {
+          id: ["Visual Studio", "Git"],
+          en: ["Visual Studio", "Git"],
+        },
+      },
+      {
+        title: {
+          id: "Concept",
+          en: "Concept",
+        },
+        desc: {
+          id: ["OOP", "Modular Architecture"],
+          en: ["OOP", "Modular Architecture"],
+        },
+      },
+    ],
 }
 
 export const worksSection ={

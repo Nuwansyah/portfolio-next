@@ -8,16 +8,17 @@ import { worksSection} from "@/data/translation";
 export default function WorksSection() {
   const { lang } = useLanguage();
   return (
-    <section id="works" className="min-h-screen px-6 md:px-20 py-30">
+    <section id="works" className="min-h-screen py-24 md:py-30 px-6">
       {/* TITLE */}
-        <div>
-      <FadeIn>
-        <h2 className="text-3xl font-bold mb-4">{worksSection.title[lang]}</h2>
-        <p className="text-texttitle mb-15">
-          {worksSection.description[lang]}
-        </p>
-        <div className="max-w-6xl mx-auto"></div>
-      </FadeIn>
+      <div className="max-w-6xl mx-auto">
+        <FadeIn>
+          <h2 className="text-3xl font-bold mb-4">
+            {worksSection.title[lang]}
+          </h2>
+          <p className="text-texttitle mb-15">
+            {worksSection.description[lang]}
+          </p>
+        </FadeIn>
       
       
       {/* GRID */}

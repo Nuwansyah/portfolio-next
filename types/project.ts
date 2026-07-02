@@ -5,8 +5,8 @@ export type Project = {
     en: string;
   };
   description: {
-    id: string;
-    en: string;
+    id: string[];
+    en: string[];
   };
   tech: string[];
   media: string[];

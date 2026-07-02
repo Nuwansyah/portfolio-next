@@ -20,13 +20,6 @@ export default function ContactSection() {
           </h2>
         </FadeIn>
 
-        {/* DESCRIPTION */}
-        <FadeIn delay={0.2}>
-          <p className="text-textdesc">
-            {contactMeSection.description[lang]}
-          </p>
-        </FadeIn>
-
         {/* CONTACT GRID */}
         <FadeIn delay={0.3}>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] sm:grid-cols-3 gap-4 w-full mt-4 items-start">

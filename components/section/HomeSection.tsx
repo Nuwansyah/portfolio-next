@@ -8,11 +8,8 @@ export default function HomeSection() {
   const { lang } = useLanguage(); 
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center"
-    >
-      <div className="text-center">
+    <section id="home" className="min-h-screen flex items-center px-6">
+      <div className="max-w-6xl mx-auto w-full text-center">
         
         <FadeIn>
           <h1 className="text-4xl md:text-6xl font-bold text-texttitle text-shadow-lg">
@@ -24,7 +21,7 @@ export default function HomeSection() {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <p className="mt-4 text-textdesc text-center pl-70 pr-70 text-lg text-shadow-lg">
+          <p className="mt-4 max-w-5xl mx-auto text-textdesc text-center text-lg text-shadow-lg">
             {homeSection.description[lang]}
           </p>
         </FadeIn>

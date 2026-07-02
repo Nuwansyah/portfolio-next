@@ -6,8 +6,8 @@ export const projects = [
       en: "Budget Confirmation Digitalization System",
     },
     description:{
-      id: "indoooooo",
-      en: "ingreesss",
+      id: ["indoooooo"],
+      en: ["ingreesss"],
     },
     tech: ["Power Apps", "Power Automate", "SharePoint"],
     thumnail: "images/DigitalisasiKA/1.png",
@@ -24,8 +24,8 @@ export const projects = [
       en: "Restaurant POS System",
     },
     description:{
-      id: "indoooooo",
-      en: "ingreesss",
+      id: ["indoooooo"],
+      en: ["ingreesss"],
     },
     tech: ["C#", ".Net", "SQL", "Visual Studio"],
     thumnail: "/images/SaliraResto/thumnail.png",
@@ -43,9 +43,17 @@ export const projects = [
       id: "Kampung Sebelah - Game Simulasi Bertani 2D",
       en: "Kampung Sebelah - 2D Farming Simulation Game",
     },
-    description:{
-      id: "indoooooo",
-      en: "ingreesss",
+    description: {
+      id: [
+        "Game simulasi bertani 2D dengan sistem farming dan ekonomi.",
+        "Pemain dapat menanam, memanen, dan menjual hasil panen.",
+        "Menggunakan sistem inventory modular dan save system berbasis GUID."
+      ],
+      en: [
+        "A 2D farming simulation game with farming and economy systems.",
+        "Players can plant, harvest, and sell crops.",
+        "Built using modular inventory architecture and GUID-based save system."
+      ],
     },
     tech: ["C#", "Unity"],
     thumnail: "/images/KampungSebelah/1.png",
@@ -61,8 +69,8 @@ export const projects = [
       en: "VR Mitigation Simulation - Disaster Preparedness Training Game",
     },
     description:{
-      id: "indoooooo",
-      en: "ingreesss",
+      id: ["indoooooo"],
+      en: ["ingreesss"],
     },
     tech: ["C#", "Unity", "VR Framework"],
     thumnail: "/images/VRMitigasi/1.png",
@@ -78,9 +86,17 @@ export const projects = [
       id: "On Your Own - Game Survival Shooter Top-Down 3D",
       en: "On Your Own - 3D Top-Down Shooter Survival Game",
     },
-    description:{
-      id: "indoooooo",
-      en: "ingreesss",
+    description: {
+      id: [
+        "Baris 1",
+        "Baris 2",
+        "Baris 3"
+      ],
+      en: [
+        "Line 1",
+        "Line 2",
+        "Line 3"
+      ],
     },
     tech: ["C#", "Unity"],
     thumnail: "/images/OnYourOwn/1.png",
@@ -97,9 +113,17 @@ export const projects = [
       id: "Tree of Life - Game Shooting Top-Down 3D",
       en: "Tree of Life - 3D Top Down Shooting Game",
     },
-    description:{
-      id: "indoooooo",
-      en: "ingreesss",
+    description: {
+      id: [
+        "Baris 1",
+        "Baris 2",
+        "Baris 3"
+      ],
+      en: [
+        "Line 1",
+        "Line 2",
+        "Line 3"
+      ],
     },
     tech: ["C#", "Unity"],
     thumnail: "images/TreeOfLife/1.png",
@@ -116,9 +140,17 @@ export const projects = [
       id: "Edukomp - Prototipe Platform E-Learning",
       en: "Edukomp - E-Learning Platform Prototype",
     },
-    description:{
-      id: "indoooooo",
-      en: "ingreesss",
+    description: {
+      id: [
+        "Baris 1",
+        "Baris 2",
+        "Baris 3"
+      ],
+      en: [
+        "Line 1",
+        "Line 2",
+        "Line 3"
+      ],
     },
     tech: ["Next.js", "Clerk", "PostgreSQL", "Vercel"],
     thumnail: "/images/EduKom/1.png",
@@ -135,9 +167,17 @@ export const projects = [
       id: "Blender 3D - Rendering Interior & Lingkungan",
       en: "Blender 3D - Interior & Environment Rendering",
     },
-    description:{
-      id: "indoooooo",
-      en: "ingreesss",
+    description: {
+      id: [
+        "Baris 1",
+        "Baris 2",
+        "Baris 3"
+      ],
+      en: [
+        "Line 1",
+        "Line 2",
+        "Line 3"
+      ],
     },
     tech: ["Blender"],
     thumnail: "/images/Blender/1.png",
@@ -153,9 +193,17 @@ export const projects = [
       id: "Modding Minecraft - Konten Kustom & Pengembangan Gameplay",
       en: "Minecraft Modding - Custom Content & Gameplay Extensions",
     },
-    description:{
-      id: "indoooooo",
-      en: "ingreesss",
+    description: {
+      id: [
+        "Baris 1",
+        "Baris 2",
+        "Baris 3"
+      ],
+      en: [
+        "Line 1",
+        "Line 2",
+        "Line 3"
+      ],
     },
     tech: ["Javascript", "Blockbench"],
     thumnail: "/images/MinecraftModding/1.jpg",

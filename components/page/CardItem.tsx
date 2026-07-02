@@ -38,7 +38,7 @@ export function CardImage({ project }: Props) {
         <CardTitle>{project.title[lang]}</CardTitle>
 
         <CardDescription>
-          {project.description[lang].slice(0, 80)}...
+          {project.description[lang][0]}...
         </CardDescription>
       </CardHeader>
 

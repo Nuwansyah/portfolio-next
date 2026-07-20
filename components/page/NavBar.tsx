@@ -80,11 +80,14 @@ export default function Navbar() {
               side="right"
               className="w-72 bg-zinc-950 text-white border-zinc-800"
             >
-              <SheetTitle className="text-left uppercase pt-5 pl-3 outline text-white">
-                Nuwansyah
-              </SheetTitle>
+              <div className="flex h-14 items-center border-b border-zinc-800 px-3">
+                <SheetTitle className="text-left uppercase text-white font-semibold tracking-wide">
+                  Nuwansyah
+                </SheetTitle>
+              </div>
+              
 
-              <div className="mt-8 flex flex-col gap-2">
+              <div className="flex flex-col gap-2 px-3 py-4">
                 {navItems.map((item) => (
                   <a
                     key={item.href}

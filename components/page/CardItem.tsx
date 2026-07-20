@@ -19,10 +19,10 @@ export function CardImage({ project }: Props) {
   const { lang } = useLanguage();
   return (
     <ProjectDialog project={project}>
-      <Card className="group cursor-pointer overflow-hidden outline-5 outline-card shadow-black-500/50 ">
+      <Card className="group h-full min-h-105 cursor-pointer overflow-hidden outline-5 outline-card shadow-black-500/50 flex flex-col">
       
       {/* IMAGE */}
-      <div className="relative aspect-video border-xl">
+      <div className="relative aspect-video shrink-0 overflow-hidden">
         <img
           src={project.thumnail}
           alt={project.title[lang]}
@@ -34,10 +34,12 @@ export function CardImage({ project }: Props) {
       </div>
 
       {/* CONTENT */}
-      <CardHeader>
-        <CardTitle>{project.title[lang]}</CardTitle>
+      <CardHeader className="flex-1">
+        <CardTitle className="line-clamp-2">
+          {project.title[lang]}
+        </CardTitle>
 
-        <CardDescription>
+        <CardDescription className="overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]">
           {project.description[lang][0]}...
         </CardDescription>
       </CardHeader>

@@ -8,6 +8,10 @@ export type Project = {
     id: string[];
     en: string[];
   };
+  keyContribution?: {
+    id: string[];
+    en: string[];
+  };
   tech: string[];
   media: string[];
   thumnail: string;

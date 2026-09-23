@@ -16,7 +16,7 @@ export default function HomeSection() {
             {homeSection.title[lang]}
           </h1>
           <h2 className="text-4xl md:text-4xl pt-3 text-texttitle font-mono text-muted text-shadow-lg">
-            Software Engineer
+            Software Developer
           </h2>
         </FadeIn>
 

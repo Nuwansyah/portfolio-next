@@ -5,64 +5,140 @@ export const webCompanyProfile: ProjectDiagram = {
       id: "user",
       label: "User",
       type: "user",
-      description:["Browser User",] 
+      description:["Fills and sumbits demo request"] 
     },
-
     {
-      id: "frontend",
+      id: "next.js",
       label: "Next.js",
       type: "application",
-      description: ["Home", "About us", "Product", "Our services", "Contact", "Request demo"]
+      description:["Front End", "Company website"] 
     },
-
     {
-      id: "backend",
-      label: "ASP.NET Core",
+      id: "aspnet",
+      label: "ASP.NET CORE",
       type: "service",
-      description:["REST API",] 
+      description:["Backend API"] 
     },
-
     {
-      id: "database",
+      id: "postgre",
       label: "PostgreSQL",
-      type: "database",
-      description:["Application Database",] 
-    },
-
-    {
-      id: "email",
-      label: "SMTP",
       type: "service",
-      description:["Email Service",] 
+      description:["Store data"] 
     },
-
+    {
+      id: "tokenservice",
+      label: "Token Service",
+      type: "service",
+      description:["Generate Link"] 
+    },
+    {
+      id: "emailservice",
+      label: "Email Service",
+      type: "service",
+      description:["Send Email"] 
+    },
+    {
+      id: "user2",
+      label: "User",
+      type: "user",
+      description:["Recives email"] 
+    },
+    {
+      id: "next.js2",
+      label: "Next.js",
+      type: "application",
+      description:["Demo Access Page"] 
+    },
+    {
+      id: "aspcore2",
+      label: "ASP.NET CORE",
+      type: "service",
+      description:["Token Validation"] 
+    },
     {
       id: "demo",
-      label: "Next.js",
+      label: "Demo Page",
       type: "application",
-      description:["Demo Application",] 
+    },
+    {
+      id: "denied",
+      label: "Denied",
+      type: "application",
     },
   ],
 
   edges: [
     {
       source: "user",
-      target: "frontend",
-      label: "HTTPS",
+      target: "next.js",
+      label: "HTTP POST",
       sourceHandle: "bottom-source",
       targetHandle: "top",
     },
     {
-      source: "frontend",
-      target: "backend",
+      source: "next.js",
+      target: "aspnet",
       label: "REST API",
       sourceHandle: "bottom-source",
       targetHandle: "top",
     },
     {
-      source: "backend",
-      target: "database",
-      label: "SQL",
+      source: "aspnet",
+      target: "emailservice",
+      sourceHandle: "bottom-source",
+      targetHandle: "top",
+    },
+    {
+      source: "aspnet",
+      target: "tokenservice",
+      sourceHandle: "bottom-source",
+      targetHandle: "top",
+    },
+    
+    {
+      source: "aspnet",
+      target: "postgre",
+      sourceHandle: "bottom-source",
+      targetHandle: "top",
+    },
+    {
+      source: "tokenservice",
+      target: "user2",
+      sourceHandle: "bottom-source",
+      targetHandle: "top",
+    },
+    {
+      source: "emailservice",
+      target: "user2",
+      sourceHandle: "bottom-source",
+      targetHandle: "top",
+    },
+    
+    {
+      source: "user2",
+      target: "next.js2",
+      label: "Open Demo URL",
+      sourceHandle: "bottom-source",
+      targetHandle: "top",
+    },
+    {
+      source: "next.js2",
+      target: "aspcore2",
+      label: "Validate Token",
+      sourceHandle: "bottom-source",
+      targetHandle: "top",
+    },
+    {
+      source: "aspcore2",
+      target: "denied",
+      label: "Invalid",
+      sourceHandle: "bottom-source",
+      targetHandle: "top",
+    },
+    {
+      source: "aspcore2",
+      target: "demo",
+      label: "Valid",
       sourceHandle: "bottom-source",
       targetHandle: "top",
     },

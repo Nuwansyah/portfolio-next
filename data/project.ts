@@ -6,28 +6,35 @@ export const projects = [
       en: "Web Company Profile",
     },
     description:{
-      id: ["Sistem Digitalisasi Konfirmasi Anggaran merupakan aplikasi internal yang dikembangkan selama program magang di PT Bank Negara Indonesia (BNI) untuk mendigitalisasi proses konfirmasi anggaran pada tim IT Financial Controller pada divisi IT Strategy & Architecture. Aplikasi ini mengganti proses berbasis dokumen fisik dan tanda tangan manual dengan alur kerja digital yang lebih efisien, memungkinkan pengguna mengajukan permintaan, memantau status secara real-time, serta mengotomatisasi proses validasi dan persetujuan menggunakan Microsoft Power Platform."
+      id: ["Web Profil Perusahaan merupakan versi publik untuk portofolio dari website perusahaan yang saya kembangkan untuk PT Cipta Solusindo Nugraha. Project ini menampilkan informasi mengenai layanan dan produk perusahaan melalui antarmuka web yang responsif, serta dilengkapi fitur demo request yang memungkinkan calon klien mengajukan akses sementara ke demo produk. Fitur demo request terintegrasi dengan backend ASP.NET Core untuk memproses permintaan, membuat link akses sementara, dan mengirimkannya melalui email. Versi portofolio ini dikembangkan tanpa menggunakan aset perusahaan, data customer, maupun informasi perusahaan yang bersifat rahasia."
       ],
-      en: ["The Budget Confirmation Digitalization System is an internal application developed during my internship at PT Bank Negara Indonesia (BNI_ to digitalize the budget confirmation process for the IT Financial Controller team. The application replace paper-based forms and handwritten approvals with a streamlined digital workflow, enabling users to submit request, track their status in real time, and automate validation and approval processes using Microsoft Power Platform."],
+      en: ["The Company Profile Website is a public portfolio version of a company website I developed for PT Cipta Solusindo Nugraha. The project showcases the company's services and product information through a responsive web interface, along with a demo request feature that allows prospective clients to request temporary access to product demonstrations. The demo request workflow is integrated with an ASP.NET Core backend to process requests, generate temporary access links, and deliver them via email. This portfolio version is developed without company assets, customer data, or other confidential company information."],
     },
     keyContribution: {
       id: [
-        "Melakukan analisis proses bisnis dan menentukan Microsoft Power Platform sebagai solusi berdasarkan lisensi perusahaan.",
-        "Mengembangkan dua aplikasi Power Apps terpisah untuk User dan Admin.",
-        "Membangun workflow otomatis menggunakan Power Automate.",
-        "Mengimplementasikan pembuatan dokumen PDF secara otomatis berdasarkan template perusahaan.",
-        "Mengintegrasikan SharePoint List dan OneDrive sebagai media penyimpanan data dan dokumen.",
-        "Mengembangkan sistem pelacakan status permintaan konfirmasi anggaran.",
-        "Mendigitalisasi proses validasi dan approval yang sebelumnya dilakukan secara manual.",
+        "Merancang dan mengembangkan website company profile menggunakan Next.js dan TypeScript.",
+        "Membangun UI yang responsif dan reusable untuk halaman layanan dan produk perusahaan.",
+        "Mengimplementasikan dukungan multibahasa untuk Bahasa Indonesia dan Bahasa Inggris.",
+        "Mengembangkan form demo request dan mengintegrasikannya dengan backend API berbasis ASP.NET Core.",
+        "Mengimplementasikan sistem akses sementara berbasis token dengan masa berlaku otomatis.",
+        "Merancang struktur database PostgreSQL untuk menyimpan data demo request dan token akses.",
+        "Mengimplementasikan keamanan token menggunakan hashing untuk mencegah penyimpanan token dalam bentuk plaintext.",
+        "Mengimplementasikan pengiriman email otomatis untuk link akses demo yang telah dibuat.",
+        "Menyusun struktur backend dengan pemisahan service untuk demo request, pengelolaan token, dan pengiriman email.",
+        "Merancang arsitektur aplikasi agar dapat dikembangkan untuk mendukung layanan berbasis web perusahaan di masa mendatang."
+
       ],
       en: [
-        "Analyzed the business process and selected Microsoft Power Platform as the solution based on the company's existing license.",
-        "Developed two separate Power Apps applications for User and Admin roles.",
-        "Built automated workflows using Power Automate.",
-        "Implemented automatic PDF document generation based on the company template.",
-        "Integrated SharePoint List and OneDrive as data and document storage.",
-        "Developed a request status tracking system for budget confirmation.",
-        "Digitalized the validation and approval process that was previously handled manually.",
+        "Designed and developed the company profile website using Next.js and TypeScript.",
+        "Built responsive and reusable UI components for the company's service and product pages.",
+        "Implemented multilingual content support for Indonesian and English.",
+        "Developed the demo request form and integrated it with the ASP.NET Core backend API.",
+        "Implemented a token-based temporary access system with automatic link expiration.",
+        "Designed the PostgreSQL database structure for demo requests and access tokens.",
+        "Implemented token hashing to prevent access tokens from being stored in plaintext.",
+        "Implemented automated email delivery for generated demo access links.",
+        "Structured the backend into separate services for demo requests, token management, and email delivery.",
+        "Designed the application architecture to support future expansion of the company's web-based services."
       ],
     },
     tech: ["React", "Next.js", "C#", "ASP.Net", "PostgreSQL", "MailTrap"],

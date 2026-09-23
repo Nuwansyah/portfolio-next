@@ -135,4 +135,20 @@ html {
   html {
     @apply font-sans;
   }
+  @import "@xyflow/react/dist/style.css";
+}
+
+.project-diagram-edge {
+  stroke-dasharray: 6 8;
+  animation: project-diagram-edge-flow 1.5s linear infinite;
+}
+
+@keyframes project-diagram-edge-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -14;
+  }
 }

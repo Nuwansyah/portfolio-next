@@ -1,5 +1,56 @@
 export const projects = [
   {
+    slug: "company-profile",
+    title: {
+      id: "Web Profil Perusahaan",
+      en: "Web Company Profile",
+    },
+    description:{
+      id: ["Sistem Digitalisasi Konfirmasi Anggaran merupakan aplikasi internal yang dikembangkan selama program magang di PT Bank Negara Indonesia (BNI) untuk mendigitalisasi proses konfirmasi anggaran pada tim IT Financial Controller pada divisi IT Strategy & Architecture. Aplikasi ini mengganti proses berbasis dokumen fisik dan tanda tangan manual dengan alur kerja digital yang lebih efisien, memungkinkan pengguna mengajukan permintaan, memantau status secara real-time, serta mengotomatisasi proses validasi dan persetujuan menggunakan Microsoft Power Platform."
+      ],
+      en: ["The Budget Confirmation Digitalization System is an internal application developed during my internship at PT Bank Negara Indonesia (BNI_ to digitalize the budget confirmation process for the IT Financial Controller team. The application replace paper-based forms and handwritten approvals with a streamlined digital workflow, enabling users to submit request, track their status in real time, and automate validation and approval processes using Microsoft Power Platform."],
+    },
+    keyContribution: {
+      id: [
+        "Melakukan analisis proses bisnis dan menentukan Microsoft Power Platform sebagai solusi berdasarkan lisensi perusahaan.",
+        "Mengembangkan dua aplikasi Power Apps terpisah untuk User dan Admin.",
+        "Membangun workflow otomatis menggunakan Power Automate.",
+        "Mengimplementasikan pembuatan dokumen PDF secara otomatis berdasarkan template perusahaan.",
+        "Mengintegrasikan SharePoint List dan OneDrive sebagai media penyimpanan data dan dokumen.",
+        "Mengembangkan sistem pelacakan status permintaan konfirmasi anggaran.",
+        "Mendigitalisasi proses validasi dan approval yang sebelumnya dilakukan secara manual.",
+      ],
+      en: [
+        "Analyzed the business process and selected Microsoft Power Platform as the solution based on the company's existing license.",
+        "Developed two separate Power Apps applications for User and Admin roles.",
+        "Built automated workflows using Power Automate.",
+        "Implemented automatic PDF document generation based on the company template.",
+        "Integrated SharePoint List and OneDrive as data and document storage.",
+        "Developed a request status tracking system for budget confirmation.",
+        "Digitalized the validation and approval process that was previously handled manually.",
+      ],
+    },
+    tech: ["React", "Next.js", "C#", "ASP.Net", "PostgreSQL", "MailTrap"],
+    thumnail: "images/CompanyProfile/1.png",
+    media: [
+      "/images/CompanyProfile/1.png",
+      "/images/CompanyProfile/2.png",
+      "/images/CompanyProfile/3.png",
+      "/images/CompanyProfile/4.png",
+      "/images/CompanyProfile/5.png",
+      "/images/CompanyProfile/6.png",
+      "/images/CompanyProfile/7.png",
+      "/images/CompanyProfile/8.png"
+      
+    ],
+    attachments: [
+      {
+        type: "github",
+        url: "https://github.com/username/project",
+      },
+    ],
+  },
+  {
     slug: "budget-confirmation-digitalization-system",
     title: {
       id: "Sistem Digitalisasi Konfirmasi Anggaran",

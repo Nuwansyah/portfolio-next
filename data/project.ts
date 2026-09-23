@@ -1,3 +1,5 @@
+import type { Project } from "@/types/project";
+
 export const projects = [
   {
     slug: "company-profile",
@@ -432,4 +434,4 @@ export const projects = [
       "/images/MinecraftModding/3.jpg",
     ],
   }
-];
+] satisfies Project[];;

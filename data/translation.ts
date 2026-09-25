@@ -50,12 +50,32 @@ export const aboutMeSection ={
     skills: [
       {
         title: {
-          id: "Web Development",
-          en: "Web Development",
+          id: "Frontend Development",
+          en: "Frontend Development",
         },
         desc: {
-          id: ["Next.js", "React", "Tailwind"],
-          en: ["Next.js", "React", "Tailwind"],
+          id: ["Next.js", "React", "TypeScript", "Tailwind"],
+          en: ["Next.js", "React", "TypeScript", "Tailwind"],
+        },
+      },
+      {
+        title: {
+          id: "Backend & API",
+          en: "Backend & API",
+        },
+        desc: {
+          id: ["C#", "ASP.NET Core", ".NET", "REST API"],
+          en: ["C#", "ASP.NET Core", ".NET", "REST API"],
+        },
+      },
+      {
+        title: {
+          id: "Database",
+          en: "Database",
+        },
+        desc: {
+          id: ["PostgreSQL", "SQL Server", "Database Design"],
+          en: ["PostgreSQL", "SQL Server", "Database Design"],
         },
       },
       {
@@ -64,28 +84,28 @@ export const aboutMeSection ={
           en: "Game Development",
         },
         desc: {
-          id: ["Unity", "C#"],
-          en: ["Unity", "C#"],
+          id: ["Unity", "C#", "XR Interaction Toolkit"],
+          en: ["Unity", "C#", "XR Interaction Toolkit"],
         },
       },
       {
         title: {
-          id: "Tools",
-          en: "Tools",
+          id: "Business Applications",
+          en: "Business Applications",
         },
         desc: {
-          id: ["Visual Studio", "Git"],
-          en: ["Visual Studio", "Git"],
+          id: ["Power Apps", "Power Automate", "Sharepoint"],
+          en: ["Power Apps", "Power Automate", "Sharepoint"],
         },
       },
       {
         title: {
-          id: "Concept",
-          en: "Concept",
+          id: "Desktop Development",
+          en: "Desktop Development",
         },
         desc: {
-          id: ["OOP", "Modular Architecture"],
-          en: ["OOP", "Modular Architecture"],
+          id: ["C#", ".NET", "WinForms", "SQL Server"],
+          en: ["C#", ".NET", "WinForms", "SQL Server"],
         },
       },
     ],
@@ -97,8 +117,8 @@ export const worksSection ={
     en: "My Works",
   },
   description: {
-    id: "bahasaindonesianyamantap",
-    en: "loreipsumblalalalaalalallala",
+    id: "Kumpulan project yang dikembangkan melalui pengalaman akademik, profesional, dan personal.",
+    en: "A selection of projects built through academic, professional, and personal development.",
   }
 }
 

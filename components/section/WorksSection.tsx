@@ -23,7 +23,7 @@ export default function WorksSection() {
       
       {/* GRID */}
       <FadeIn>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           {projects.map((project) => (
             <CardImage key={project.slug} project={project} />
           ))}

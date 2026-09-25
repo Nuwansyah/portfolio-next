@@ -19,7 +19,7 @@ export function CardImage({ project }: Props) {
   const { lang } = useLanguage();
   return (
     <ProjectDialog project={project}>
-      <Card className="group h-full min-h-105 cursor-pointer overflow-hidden outline-5 outline-card shadow-black-500/50 flex flex-col">
+      <Card className="group flex h-full min-h-0 cursor-pointer flex-col overflow-hidden outline-5 outline-card shadow-black-500/50">
       
       {/* IMAGE */}
       <div className="relative aspect-video shrink-0 overflow-hidden">

@@ -61,14 +61,14 @@ export default function ProjectDialog({ project, children }: Props) {
     >
       <DialogTrigger asChild>{children}</DialogTrigger>
 
-      <DialogContent className="w-[calc(100vw-2rem)]! max-w-6xl! h-160! max-h-[calc(100vh-2rem)]! p-0 overflow-hidden bg-black text-white border border-zinc-800 rounded-xl">
+      <DialogContent className="flex h-[100dvh] max-h-[100dvh] w-screen max-w-none flex-col overflow-hidden rounded-none border border-zinc-800 bg-black p-0 text-white sm:h-[min(40rem,calc(100dvh-2rem))] sm:max-h-[calc(100dvh-2rem)] sm:w-[calc(100vw-2rem)] sm:max-w-6xl sm:rounded-xl">
         <DialogTitle className="sr-only">
           {project.title[lang]}
         </DialogTitle>
         {view === "detail" ? (
-  <div className="grid h-full min-h-0 grid-cols-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.65fr)]">
+        <div className="grid h-full min-h-0 grid-cols-1 overflow-y-auto lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.65fr)] lg:overflow-hidden">
           {/* LEFT: MEDIA */}
-          <div className="min-h-0 flex flex-col bg-black p-4 sm:p-6">
+          <div className="flex shrink-0 flex-col bg-black p-3 sm:p-6 lg:min-h-0">
             <div>
               <div className="relative w-full max-w-4xl aspect-video max-h-full rounded-lg overflow-hidden bg-zinc-950">
                 {loading && (
@@ -158,7 +158,7 @@ export default function ProjectDialog({ project, children }: Props) {
           </div>
 
           {/* RIGHT: DETAIL */}
-          <div className="min-h-0 flex flex-col border-t border-zinc-800 p-5 sm:p-6 lg:border-l lg:border-t-0">
+          <div className="flex flex-col border-t border-zinc-800 p-4 sm:p-6 lg:min-h-0 lg:border-l lg:border-t-0">
             <div className="shrink-0 space-y-4">
               <h2 className="text-xl sm:text-2xl font-bold leading-tight pr-10">
                 {project.title[lang]}
@@ -176,7 +176,7 @@ export default function ProjectDialog({ project, children }: Props) {
               </div>
             </div>
 
-            <ScrollArea className="mt-5 min-h-0 flex-1 pr-4">
+            <ScrollArea className="mt-5 lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:pr-4">
               <div className="space-y-3 text-sm sm:text-base text-zinc-300 leading-relaxed">
                 {project.description[lang].map((text, i) => (
                   <p key={i}>{text}</p>

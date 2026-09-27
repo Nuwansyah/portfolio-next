@@ -5,6 +5,7 @@ import FadeIn from "@/animation/FadeIn";
 import { useLanguage } from "@/context/LanguageContext";
 import { certificatesSection } from "@/data/translation";
 import { certificates } from "@/data/certificate";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function CertificatesSection() {
   const { lang } = useLanguage();
@@ -26,7 +27,7 @@ export default function CertificatesSection() {
         </FadeIn>
 
         <FadeIn>
-        <div className="max-h-[60vh] overflow-y-auto overscroll-contain rounded-2xl border border-zinc-800 bg-zinc-950/70 sm:max-h-[28rem]">
+        <ScrollArea className="h-[min(60vh,28rem)] rounded-2xl border border-zinc-800 bg-zinc-950/70">
           <ul className="divide-y divide-zinc-800">
             {certificates.map((certificate) => {
               const formattedDate = new Intl.DateTimeFormat(
@@ -67,7 +68,7 @@ export default function CertificatesSection() {
               );
             })}
           </ul>
-        </div>
+        </ScrollArea>
           
         </FadeIn>
       </div>

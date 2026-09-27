@@ -3,6 +3,7 @@
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { DialogTitle } from "@/components/ui/dialog";
@@ -69,6 +70,13 @@ export default function ProjectDialog({ project, children }: Props) {
         <DialogTitle className="sr-only">
           {project.title[lang]}
         </DialogTitle>
+        
+        <DialogDescription className="sr-only">
+          {lang === "id"
+            ? `Detail proyek ${project.title[lang]}`
+            : `Project details for ${project.title[lang]}`}
+        </DialogDescription>
+
         {view === "detail" ? (
         <div className="grid h-full min-h-0 grid-cols-1 overflow-y-auto lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.65fr)] lg:overflow-hidden">
           {/* LEFT: MEDIA */}
@@ -100,7 +108,7 @@ export default function ProjectDialog({ project, children }: Props) {
                       alt={project.title[lang]}
                       fill
                       sizes="(max-width: 1024px) 100vw, 60vw"
-                      onLoadingComplete={() => setLoading(false)}
+                      onLoad={() => setLoading(false)}
                       className={`object-contain transition-opacity duration-300 ${
                         loading ? "opacity-0" : "opacity-100"
                       }`}
@@ -250,6 +258,11 @@ export default function ProjectDialog({ project, children }: Props) {
             <DialogTitle className="sr-only">
               {lang === "id" ? "Gambar diperbesar" : "Zoomed image"}
             </DialogTitle>
+            <DialogDescription className="sr-only">
+              {lang === "id"
+                ? `Pratinjau gambar ${project.title[lang]}`
+                : `Image preview for ${project.title[lang]}`}
+            </DialogDescription>
 
             <button
               type="button"

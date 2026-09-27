@@ -11,10 +11,15 @@ export const navText = {
       id: "Projek",
       en: "My Works",
     },
+    certificates: {
+      id: "Sertifikat",
+      en: "Certificates",
+    },
     contact: {
       id: "Kontak",
       en: "Contact",
     },
+    
   };
 
 export const homeSection ={
@@ -125,3 +130,22 @@ export const contactMeSection ={
     en: "loreipsumblalalalaalalallala",
   }
 }
+
+export const certificatesSection = {
+  title: {
+    id: "Sertifikat",
+    en: "Certificates",
+  },
+  description: {
+    id: "Daftar sertifikat dan pelatihan yang telah saya selesaikan.",
+    en: "A list of certificates and training I have completed.",
+  },
+  dateLabel: {
+    id: "Tanggal",
+    en: "Date",
+  },
+  viewLabel: {
+    id: "Lihat sertifikat",
+    en: "View certificate",
+  },
+};

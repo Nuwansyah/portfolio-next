@@ -25,6 +25,7 @@ export default function Navbar() {
     { href: "#home", label: navText.home[lang] },
     { href: "#about", label: navText.about[lang] },
     { href: "#works", label: navText.works[lang] },
+    { href: "#certificates", label: navText.certificates[lang] },
     { href: "#contact", label: navText.contact[lang] },
   ];
 

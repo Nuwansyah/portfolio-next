@@ -16,6 +16,8 @@ import {
   ArrowLeft,
   Loader2,
   Network,
+  ZoomIn,
+  X,
 } from "lucide-react";
 import ProjectDiagram from "@/components/projects/ProjectDiagram";
 import { projectDiagrams } from "@/data/projectDiagram";
@@ -32,6 +34,7 @@ export default function ProjectDialog({ project, children }: Props) {
   const [index, setIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<"detail" | "diagram">("detail");
+  const [isZoomed, setIsZoomed] = useState(false);
   const diagram = projectDiagrams[project.slug];
   const contributions = project.keyContribution?.[lang];
   const attachments = project.attachments;
@@ -56,6 +59,7 @@ export default function ProjectDialog({ project, children }: Props) {
           setView("detail");
           setIndex(0);
           setLoading(true);
+          setIsZoomed(false);
         }
       }}
     >
@@ -85,18 +89,27 @@ export default function ProjectDialog({ project, children }: Props) {
                     onLoad={() => setLoading(false)}
                   />
                 ) : (
-                  <Image
-                    src={current}
-                    alt={project.title[lang]}
-                    fill
-                    sizes="(max-width: 1024px) calc(100vw - 4rem), 60vw"
-                    onLoadingComplete={() => setLoading(false)}
-                    className={`
-                      object-contain
-                      transition-opacity duration-300
-                      ${loading ? "opacity-0" : "opacity-100"}
-                    `}
-                  />
+                  <button
+                    type="button"
+                    onClick={() => setIsZoomed(true)}
+                    aria-label={lang === "id" ? "Perbesar gambar" : "Zoom image"}
+                    className="group absolute inset-0 z-0 cursor-zoom-in"
+                  >
+                    <Image
+                      src={current}
+                      alt={project.title[lang]}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      onLoadingComplete={() => setLoading(false)}
+                      className={`object-contain transition-opacity duration-300 ${
+                        loading ? "opacity-0" : "opacity-100"
+                      }`}
+                    />
+
+                    <span className="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-black/70 text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100">
+                      <ZoomIn className="size-5" />
+                    </span>
+                  </button>
                 )}
               </div>
             </div>
@@ -226,6 +239,39 @@ export default function ProjectDialog({ project, children }: Props) {
           </div>
         </div>
       )}
+      <Dialog
+          open={isZoomed}
+          onOpenChange={setIsZoomed}
+        >
+          <DialogContent
+            showCloseButton={false}
+            className="fixed top-1/2 left-1/2 z-[100] flex h-[90dvh] max-h-[900px] w-[92vw] max-w-[1200px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-xl border border-zinc-700 bg-black/95 p-4 sm:max-w-[1200px]"
+          >
+            <DialogTitle className="sr-only">
+              {lang === "id" ? "Gambar diperbesar" : "Zoomed image"}
+            </DialogTitle>
+
+            <button
+              type="button"
+              onClick={() => setIsZoomed(false)}
+              aria-label={lang === "id" ? "Tutup gambar" : "Close image"}
+              className="absolute top-4 right-4 z-10 flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+            >
+              <X className="size-6" />
+            </button>
+
+            <div className="relative h-full w-full">
+              <Image
+                src={current}
+                alt={project.title[lang]}
+                fill
+                sizes="100vw"
+                priority
+                className="object-contain"
+              />
+            </div>
+          </DialogContent>
+        </Dialog>
       </DialogContent>
     </Dialog>
   );
